@@ -9,7 +9,7 @@ public class ShortestPath {
         BSTNode lca= findLCA(root, x,y);
         return (getDistance(root,x)+getDistance(root,y)-2*getDistance(root,lca.getData()));
     }
-    public int getDistance(BSTNode root, int x){
+    private int getDistance(BSTNode root, int x){
         int data= root.getData();
         if(data==x){
             return 0;
@@ -21,7 +21,7 @@ public class ShortestPath {
             return 1+ getDistance(root.getRight(),x);
         }
     }
-    public BSTNode findLCA(BSTNode root, int x, int y){
+    private BSTNode findLCA(BSTNode root, int x, int y){
         int val= root.getData();
         BSTNode left, right;
         if(root==null){
