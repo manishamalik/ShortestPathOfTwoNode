@@ -1,8 +1,6 @@
 package BinarySearchTreePackage;
 
 
-import BSTPackage.BSTNode;
-
 public class ShortestPath {
     public int FindShortestPath(BSTNode root, int x, int y){
         int data= root.getData();
